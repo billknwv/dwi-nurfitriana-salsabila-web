@@ -500,17 +500,16 @@ const Skills = () => (
 
 /* ══ TOOLS ════════════════════════════════════════════ */
 const tools = [
-    { name: "VS Code",     img: "/icon/vsc.jpg",     color: "#007acc" },
-  { name: "Arduino IDE", img: "/icon/ArduinoIDE.jpg", color: "#00979d" },
-  { name: "Python",      img: "/icon/Python.jpg",      color: "#3776ab" },
-  { name: "Laravel",     img: "/icon/Laravel.jpg",     color: "#ef4444" },
-  { name: "MySQL",       img: "/icon/MySQL.jpg",       color: "#00758f" },
-  { name: "GitHub",      img: "/icon/GitHub.jpg",      color: "#24292e" },
-  { name: "Figma",       img: "/icon/Figma.jpg",       color: "#f24e1e" },
-  { name: "Canva",       img: "/icon/Canva.jpg",       color: "#00c4cc" },
-  { name: "Capcut",      img: "/icon/Capcut.jpg",      color: "#252525" }, // Warna disesuaikan ke gelap khas CapCut
+  { name: "VS Code",     img: "/icon/vsc.jpg",         color: "#007acc" },
+  { name: "Arduino IDE", img: "/icon/arduinoide.jpg",  color: "#00979d" }, // Ubah ke huruf kecil
+  { name: "Python",      img: "/icon/python.jpg",      color: "#3776ab" }, // Ubah ke huruf kecil
+  { name: "Laravel",     img: "/icon/laravel.jpg",     color: "#ef4444" }, // Ubah ke huruf kecil
+  { name: "MySQL",       img: "/icon/mysql.jpg",       color: "#00758f" }, // Ubah ke huruf kecil
+  { name: "GitHub",      img: "/icon/github.jpg",      color: "#24292e" }, // Ubah ke huruf kecil
+  { name: "Figma",       img: "/icon/figma.jpg",       color: "#f24e1e" }, // Ubah ke huruf kecil
+  { name: "Canva",       img: "/icon/canva.jpg",       color: "#00c4cc" }, // Ubah ke huruf kecil
+  { name: "Capcut",      img: "/icon/capcut.jpg",      color: "#252525" }, // Ubah ke huruf kecil
 ];
-
 const Tools = () => (
   <section id="tools" style={{ background:C.bg, padding:"96px 0" }}>
     <div style={{ maxWidth:1100, margin:"0 auto", padding:"0 24px" }}>
