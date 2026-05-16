@@ -500,15 +500,15 @@ const Skills = () => (
 
 /* ══ TOOLS ════════════════════════════════════════════ */
 const tools = [
-    { name: "VS Code",     img: "/src/icon/vsc.jpg",     color: "#007acc" },
-  { name: "Arduino IDE", img: "/src/icon/ArduinoIDE.jpg", color: "#00979d" },
-  { name: "Python",      img: "/src/icon/Python.jpg",      color: "#3776ab" },
-  { name: "Laravel",     img: "/src/icon/Laravel.jpg",     color: "#ef4444" },
-  { name: "MySQL",       img: "/src/icon/MySQL.jpg",       color: "#00758f" },
-  { name: "GitHub",      img: "/src/icon/GitHub.jpg",      color: "#24292e" },
-  { name: "Figma",       img: "/src/icon/Figma.jpg",       color: "#f24e1e" },
-  { name: "Canva",       img: "/src/icon/Canva.jpg",       color: "#00c4cc" },
-  { name: "Capcut",      img: "/src/icon/Capcut.jpg",      color: "#252525" }, // Warna disesuaikan ke gelap khas CapCut
+    { name: "VS Code",     img: "/icon/vsc.jpg",     color: "#007acc" },
+  { name: "Arduino IDE", img: "/icon/ArduinoIDE.jpg", color: "#00979d" },
+  { name: "Python",      img: "/icon/Python.jpg",      color: "#3776ab" },
+  { name: "Laravel",     img: "/icon/Laravel.jpg",     color: "#ef4444" },
+  { name: "MySQL",       img: "/icon/MySQL.jpg",       color: "#00758f" },
+  { name: "GitHub",      img: "/icon/GitHub.jpg",      color: "#24292e" },
+  { name: "Figma",       img: "/icon/Figma.jpg",       color: "#f24e1e" },
+  { name: "Canva",       img: "/icon/Canva.jpg",       color: "#00c4cc" },
+  { name: "Capcut",      img: "/icon/Capcut.jpg",      color: "#252525" }, // Warna disesuaikan ke gelap khas CapCut
 ];
 
 const Tools = () => (
