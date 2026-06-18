@@ -1348,24 +1348,7 @@ const Gallery = () => {
         })}
 
         {/* Tip box */}
-        <FadeIn delay={0.2}>
-          <div style={{ marginTop:8, padding:"16px 22px", borderRadius:14,
-            background:C.white, border:`1.5px dashed ${C.border}`,
-            display:"flex", alignItems:"flex-start", gap:12 }}>
-            <span style={{ fontSize:20, marginTop:1 }}>💡</span>
-            <p style={{ fontFamily:"'DM Sans',sans-serif", color:C.muted, fontSize:13, lineHeight:1.65, margin:0 }}>
-              <strong style={{ color:C.txt }}>Cara menambah karya:</strong> Letakkan gambar di{" "}
-              <code style={{ background:"#f3f4f6", padding:"2px 7px", borderRadius:5, fontSize:12 }}>public/desain/</code>
-              {" "}lalu tambahkan entri baru di array{" "}
-              <code style={{ background:"#f3f4f6", padding:"2px 7px", borderRadius:5, fontSize:12 }}>galleryItems</code>
-              ,{" "}
-              <code style={{ background:"#f3f4f6", padding:"2px 7px", borderRadius:5, fontSize:12 }}>stuffGroups</code>
-              , atau{" "}
-              <code style={{ background:"#f3f4f6", padding:"2px 7px", borderRadius:5, fontSize:12 }}>igAccounts</code>
-              {" "}pada file <code style={{ background:"#f3f4f6", padding:"2px 7px", borderRadius:5, fontSize:12 }}>App.jsx</code>.
-            </p>
-          </div>
-        </FadeIn>
+        
       </div>
 
       {/* Lightbox Poster/Banner */}
