@@ -275,7 +275,7 @@ const About = () => (
               { label:"Instagram", href:"https://www.instagram.com/dnfsalsabila/" },
               { label:"GitHub",    href:"https://github.com/billknwv" },
               { label:"LinkedIn",  href:"https://www.linkedin.com/in/dwi-nurfitriana-salsabila" },
-              { label:"Unduh CV",  href:"/CV.pdf", download:true },
+              { label:"CV",  href:"https://drive.google.com/file/d/1sh6XLKprALCkz1SpqKuspVzBLOT0ddDL/view?usp=sharing", download:true },
             ].map(l=>(
               <a key={l.label} href={l.href}
                 target={l.download?undefined:"_blank"} rel="noreferrer"
@@ -345,70 +345,283 @@ const Education = () => (
 
 /* ══ PROJECTS ═════════════════════════════════════════ */
 const projects = [
-  { icon:"☕", title:"Website Coffee Shop & Sistem Reservasi", year:"2025",
+  {
+    icon:"☕", title:"Website Coffee Shop & Sistem Reservasi", year:"2025",
     tech:["Laravel","MySQL","UI/UX","UML"],
-    items:["Aplikasi berbasis web yang dirancang sebagai media branding digital sekaligus platform layanan reservasi online untuk bisnis coffee shop."] },
-  { icon:"📊", title:"Analisis Sistem Informasi MaoPlace", year:"2025",
+    items:["Aplikasi berbasis web yang dirancang sebagai media branding digital sekaligus platform layanan reservasi online untuk bisnis coffee shop."],
+    links: [
+      { label:"Source Code", url:"https://github.com/Oliviafzhh/maocoffee", meta:"Laravel · Private" },
+      { label:"Figma", url:"https://www.figma.com/design/03Q7nADDyhAL5ifu6eLMvy/UI-UX-T3E?node-id=0-1&t=GGAG0aEFBlsUh5uO-1", meta:"UI/UX Design · Figma" },
+      { label:"Dokumen", url:"https://drive.google.com/file/d/1hXV6VB7EpLjGK-8PN5aHniigau9y6YXG/view?usp=sharing", meta:"PDF · Google Drive" },
+    ],
+  },
+  {
+    icon:"📊", title:"Analisis Sistem Informasi MaoPlace", year:"2025",
     tech:["Business Analysis","SDLC","Dashboard"],
-    items:["Proyek analisis proses bisnis yang bertujuan untuk mengidentifikasi hambatan operasional pada UMKM MaoPlace."] },
-  { icon:"🎓", title:"Sistem Informasi Akademik", year:"2025",
+    items:["Proyek analisis proses bisnis yang bertujuan untuk mengidentifikasi hambatan operasional pada UMKM MaoPlace."],
+    links: [
+      { label:"Dokumen", url:"https://drive.google.com/file/d/1O3OE9qUsfZA7CHGhLSrOIAkybkWHhL9u/view?usp=sharing", meta:"PDF · Google Drive" },
+    ],
+  },
+  {
+    icon:"🎓", title:"Sistem Informasi Akademik", year:"2025",
     tech:["UI/UX","Figma","Web Dev"],
-    items:["Perancangan dan pengembangan platform sistem informasi akademik berbasis desktop untuk mengoptimalkan pengelolaan data pendidikan."] },
-  { icon:"🤖", title:"Waste Material Detector", year:"2025",
+    items:["Perancangan dan pengembangan platform sistem informasi akademik berbasis desktop untuk mengoptimalkan pengelolaan data pendidikan."],
+    links: [
+      { label:"Source Code", url:"https://github.com/billknwv/Sistem-Informasi-Akademik-UNIVERSITAS-ALTHERA", meta:"Web · Public" },
+      { label:"Figma", url:"https://www.figma.com/design/ccWj4ULlFehFBwmr432Y6s/T2E?node-id=0-1&t=lhD5WZ8gUKRqX0Cm-1", meta:"UI/UX Design · Figma" },
+      { label:"Dokumen", url:"https://drive.google.com/file/d/147516eyw4CRI8BD5CwbTO_5ca7_R1YBq/view?usp=sharing", meta:"PDF · Google Drive" },
+    ],
+  },
+  {
+    icon:"🤖", title:"Waste Material Detector", year:"2025",
     tech:["AI","Python","Web Dev"],
-    items:["Aplikasi berbasis web terintegrasi kecerdasan buatan (AI) yang berfungsi untuk mendeteksi dan mengidentifikasi jenis material sampah secara otomatis."] },
-  { icon:"♻️", title:"SORTIR.IN – Smart Waste Management", year:"2026",
+    items:["Aplikasi berbasis web terintegrasi kecerdasan buatan (AI) yang berfungsi untuk mendeteksi dan mengidentifikasi jenis material sampah secara otomatis."],
+    links: [
+      { label:"Source Code", url:"https://github.com/billknwv/Waste-Material-Detector", meta:"Python · Public" },
+      { label:"Dokumen", url:"https://drive.google.com/file/d/1xlHa6mmmve7CNy-uUDlvNHVi2Hu4iqUt/view?usp=sharing", meta:"PDF · Google Drive" },
+    ],
+  },
+  {
+    icon:"♻️", title:"SORTIR.IN – Smart Waste Management", year:"2026",
     tech:["IoT","Arduino","Cloud"],
-    items:["Inovasi sistem pengelolaan sampah pintar berbasis IoT yang mengombinasikan perangkat keras pemilah sampah otomatis dengan platform monitoring berbasis web."] },
+    items:["Inovasi sistem pengelolaan sampah pintar berbasis IoT yang mengombinasikan perangkat keras pemilah sampah otomatis dengan platform monitoring berbasis web."],
+    links: [
+      { label:"Source Code", url:"https://github.com/grizzyll/sortirin.git", meta:"Arduino / Web · Public" },
+      { label:"Dokumen", url:"https://drive.google.com/file/d/1SpDb2A8iUj5qH_qPSWjOEjcL5sFKGJGb/view?usp=sharing", meta:"PDF · Google Drive" },
+    ],
+  },
 ];
 
-const Projects = () => (
-  <section id="projects" style={{ background:C.white, padding:"96px 0" }}>
-    <div style={{ maxWidth:1100, margin:"0 auto", padding:"0 24px" }}>
-      <FadeIn><SLabel c="Pengalaman Proyek"/><STitle c="Project"/><Divider/></FadeIn>
-      <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(300px,1fr))", gap:20 }}>
-        {projects.map((p,i)=>(
-          <FadeIn key={i} delay={i*0.08}>
-            <Card style={{ height:"100%" }}>
-              <div style={{ display:"flex", alignItems:"flex-start", justifyContent:"space-between", marginBottom:14 }}>
-                <div style={{ width:52, height:52, borderRadius:16, background:`${C.blue}12`,
-                  border:`1.5px solid ${C.blue}22`, display:"flex", alignItems:"center",
-                  justifyContent:"center", fontSize:26 }}>{p.icon}</div>
-                <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:12, fontWeight:700,
-                  color:"#9ca3af", background:"#f3f4f6", padding:"3px 10px", borderRadius:999 }}>{p.year}</span>
-              </div>
-              <h3 style={{ fontFamily:"'Syne',sans-serif", fontWeight:800, color:C.txt,
-                fontSize:15, lineHeight:1.3, marginBottom:10 }}>{p.title}</h3>
-              <div style={{ display:"flex", flexWrap:"wrap", gap:6, marginBottom:14 }}>
-                {p.tech.map(t=>(
-                  <span key={t} style={{ background:C.blueLt, color:C.blue, fontFamily:"'DM Sans',sans-serif",
-                    fontWeight:700, fontSize:11, padding:"3px 10px", borderRadius:999 }}>{t}</span>
-                ))}
-              </div>
-              <ul style={{ listStyle:"none", padding:0, margin:0 }}>
-                {p.items.map((item,j)=>(
-                  <li key={j} style={{ fontFamily:"'DM Sans',sans-serif", color:"#4b5563", fontSize:14,
-                    padding:"4px 0", display:"flex", gap:8, alignItems:"flex-start", lineHeight:1.5 }}>
-                    <span style={{ color:C.neon, fontSize:18, lineHeight:1.2, flexShrink:0, fontWeight:900 }}>›</span>{item}
-                  </li>
-                ))}
-              </ul>
-            </Card>
-          </FadeIn>
-        ))}
-      </div>
-    </div>
-  </section>
-);
+/* ── Project Modal ─── */
+const ProjectModal = ({ project, onClose }) => {
+  useEffect(() => {
+    const fn = (e) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", fn);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", fn);
+      document.body.style.overflow = "";
+    };
+  }, [onClose]);
 
-/* ══ GALLERY DATA ═════════════════════════════════════
-   galleryItems  → kategori Poster & Banner (single-image per item)
-   igAccounts    → kategori "konten instagram" (multi-image per akun)
-   stuffGroups   → kategori "stuff" (multi-image per grup, mirip instagram)
-══════════════════════════════════════════════════════ */
+  return (
+    <div
+      onClick={onClose}
+      style={{
+        position:"fixed", inset:0, zIndex:999,
+        background:"rgba(5,10,24,.82)",
+        display:"flex", alignItems:"center", justifyContent:"center",
+        padding:"20px", animation:"pmFade .2s ease",
+      }}
+    >
+      <div
+        onClick={e => e.stopPropagation()}
+        style={{
+          background:C.white,
+          borderRadius:20,
+          width:"100%",
+          maxWidth:480,
+          boxShadow:"0 32px 80px rgba(0,0,0,.35)",
+          overflow:"hidden",
+        }}
+      >
+        {/* Header */}
+        <div style={{
+          padding:"20px 22px 18px",
+          borderBottom:`1px solid ${C.border}`,
+          display:"flex", justifyContent:"space-between", alignItems:"flex-start", gap:12,
+        }}>
+          <div style={{ flex:1, minWidth:0 }}>
+            <p style={{
+              fontFamily:"'Syne',sans-serif", fontWeight:900,
+              fontSize:15, color:C.txt, margin:0, lineHeight:1.4,
+            }}>
+              {project.title}
+            </p>
+            <p style={{
+              fontFamily:"'DM Sans',sans-serif", fontSize:13,
+              color:C.muted, margin:"5px 0 0",
+            }}>
+              {project.year} · {project.tech.join(" · ")}
+            </p>
+          </div>
+          <button
+            onClick={onClose}
+            style={{
+              flexShrink:0, width:32, height:32, borderRadius:"50%",
+              border:`1.5px solid ${C.border}`, background:"none",
+              cursor:"pointer", fontSize:16, color:C.muted,
+              display:"flex", alignItems:"center", justifyContent:"center",
+              transition:"all .2s",
+            }}
+            onMouseEnter={e=>{ e.currentTarget.style.background=C.blueLt; e.currentTarget.style.color=C.blue; }}
+            onMouseLeave={e=>{ e.currentTarget.style.background="none"; e.currentTarget.style.color=C.muted; }}
+          >
+            ✕
+          </button>
+        </div>
+
+        {/* Deskripsi */}
+        <div style={{ padding:"16px 22px 0" }}>
+          <p style={{
+            fontFamily:"'DM Sans',sans-serif", fontSize:14,
+            color:"#374151", lineHeight:1.75, margin:0,
+          }}>
+            {project.items[0]}
+          </p>
+        </div>
+
+        {/* Link List */}
+        <div style={{ padding:"16px 22px 22px", display:"flex", flexDirection:"column", gap:10 }}>
+          {project.links && project.links.map((link, i) => (
+            <div key={i} style={{
+              display:"flex", alignItems:"center", justifyContent:"space-between",
+              padding:"12px 16px",
+              border:`1.5px solid ${C.border}`,
+              borderRadius:12,
+              gap:12,
+            }}>
+              <div style={{ minWidth:0 }}>
+                <p style={{
+                  fontFamily:"'DM Sans',sans-serif", fontWeight:700,
+                  fontSize:14, color:C.txt, margin:0,
+                }}>
+                  {link.label}
+                </p>
+                {link.meta && (
+                  <p style={{
+                    fontFamily:"'DM Sans',sans-serif", fontSize:11,
+                    color:C.muted, margin:"3px 0 0",
+                  }}>
+                    {link.meta}
+                  </p>
+                )}
+              </div>
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  flexShrink:0,
+                  padding:"7px 16px",
+                  borderRadius:8,
+                  background:C.blue,
+                  color:"#fff",
+                  fontFamily:"'DM Sans',sans-serif",
+                  fontWeight:700,
+                  fontSize:13,
+                  textDecoration:"none",
+                  transition:"all .2s",
+                  whiteSpace:"nowrap",
+                }}
+                onMouseEnter={e=>{ e.currentTarget.style.background=C.blueDk; e.currentTarget.style.transform="translateY(-1px)"; }}
+                onMouseLeave={e=>{ e.currentTarget.style.background=C.blue; e.currentTarget.style.transform="none"; }}
+              >
+                Buka
+              </a>
+            </div>
+          ))}
+
+          {(!project.links || project.links.length === 0) && (
+            <p style={{
+              fontFamily:"'DM Sans',sans-serif", color:C.muted,
+              fontSize:14, textAlign:"center", padding:"12px 0", margin:0,
+            }}>
+              Belum ada tautan yang tersedia.
+            </p>
+          )}
+        </div>
+      </div>
+
+      <style>{`@keyframes pmFade{from{opacity:0}to{opacity:1}}`}</style>
+    </div>
+  );
+};
+
+/* ── Projects Section ── */
+const Projects = () => {
+  const [modalProject, setModalProject] = useState(null);
+
+  return (
+    <section id="projects" style={{ background:C.white, padding:"96px 0" }}>
+      <div style={{ maxWidth:1100, margin:"0 auto", padding:"0 24px" }}>
+        <FadeIn><SLabel c="Pengalaman Proyek"/><STitle c="Project"/><Divider/></FadeIn>
+        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(300px,1fr))", gap:20 }}>
+          {projects.map((p,i)=>(
+            <FadeIn key={i} delay={i*0.08}>
+              <Card style={{ height:"100%", display:"flex", flexDirection:"column" }}>
+                <div style={{ display:"flex", alignItems:"flex-start", justifyContent:"space-between", marginBottom:14 }}>
+                  <div style={{ width:52, height:52, borderRadius:16, background:`${C.blue}12`,
+                    border:`1.5px solid ${C.blue}22`, display:"flex", alignItems:"center",
+                    justifyContent:"center", fontSize:26 }}>{p.icon}</div>
+                  <span style={{ fontFamily:"'DM Sans',sans-serif", fontSize:12, fontWeight:700,
+                    color:"#9ca3af", background:"#f3f4f6", padding:"3px 10px", borderRadius:999 }}>{p.year}</span>
+                </div>
+                <h3 style={{ fontFamily:"'Syne',sans-serif", fontWeight:800, color:C.txt,
+                  fontSize:15, lineHeight:1.3, marginBottom:10 }}>{p.title}</h3>
+                <div style={{ display:"flex", flexWrap:"wrap", gap:6, marginBottom:14 }}>
+                  {p.tech.map(t=>(
+                    <span key={t} style={{ background:C.blueLt, color:C.blue, fontFamily:"'DM Sans',sans-serif",
+                      fontWeight:700, fontSize:11, padding:"3px 10px", borderRadius:999 }}>{t}</span>
+                  ))}
+                </div>
+                <ul style={{ listStyle:"none", padding:0, margin:0, flex:1 }}>
+                  {p.items.map((item,j)=>(
+                    <li key={j} style={{ fontFamily:"'DM Sans',sans-serif", color:"#4b5563", fontSize:14,
+                      padding:"4px 0", display:"flex", gap:8, alignItems:"flex-start", lineHeight:1.5 }}>
+                      <span style={{ color:C.neon, fontSize:18, lineHeight:1.2, flexShrink:0, fontWeight:900 }}>›</span>{item}
+                    </li>
+                  ))}
+                </ul>
+
+                {p.links && p.links.length > 0 && (
+                  <button
+                    onClick={() => setModalProject(p)}
+                    style={{
+                      marginTop:18,
+                      width:"100%", padding:"9px 0",
+                      borderRadius:10,
+                      border:`1.5px solid ${C.border}`,
+                      background:"transparent",
+                      cursor:"pointer",
+                      fontFamily:"'DM Sans',sans-serif", fontWeight:700, fontSize:13,
+                      color:C.muted,
+                      transition:"all .22s ease",
+                    }}
+                    onMouseEnter={e=>{
+                      e.currentTarget.style.borderColor=C.blue;
+                      e.currentTarget.style.color=C.blue;
+                      e.currentTarget.style.background=C.blueLt;
+                    }}
+                    onMouseLeave={e=>{
+                      e.currentTarget.style.borderColor=C.border;
+                      e.currentTarget.style.color=C.muted;
+                      e.currentTarget.style.background="transparent";
+                    }}
+                  >
+                    Lihat Detail
+                  </button>
+                )}
+              </Card>
+            </FadeIn>
+          ))}
+        </div>
+      </div>
+
+      {modalProject && (
+        <ProjectModal
+          project={modalProject}
+          onClose={() => setModalProject(null)}
+        />
+      )}
+    </section>
+  );
+};
+
+/* ══ GALLERY DATA ═════════════════════════════════════ */
 
 const galleryItems = [
-  // ── Poster ─────────────────────────────
   { id:1,  cat:"Poster", title:"Techno Cup",   img:"/desain/poster-1.png" },
   { id:2,  cat:"Poster", title: "Techno Competition",  img:"/desain/poster-13.png"},
   { id:3,  cat:"Poster", title: "HMPSTI MERCH",   img:"/desain/poster-4.png"},
@@ -422,29 +635,22 @@ const galleryItems = [
   { id:11, cat:"Poster", title:"Feed your mind",  img:"/desain/poster-12.png"},
   { id:12, cat:"Poster", title:"I CARE",   img:"/desain/poster-7.png"},
   { id:13, cat:"Poster", title:"Pentas Seni Live",   img:"/desain/poster-6.png"},
-  // ── Banner ──────────────────────────────────────
   { id:20, cat:"Banner", title:"IPB Wellcome Banner",   img:"/desain/banner-1.png" },
   { id:21, cat:"Banner", title:"Techno Competition",   img:"/desain/banner-2.png" },
   { id:22, cat:"Banner", title:"Techfair",   img:"/desain/banner-3.png" },
   { id:23, cat:"Banner", title:"Bazar",   img:"/desain/banner-4.png" },
 ];
 
-/*
-  stuffGroups — mirip igAccounts:
-  setiap grup punya beberapa gambar (images[]).
-  Nama file "stuff-1(2).png" = gambar ke-2 dari grup stuff-1.
-  "17.png" berdiri sendiri sebagai 1 grup.
-*/
 const stuffGroups = [
   {
     id: "stuff-1",
     title: "T-shirt",
     bio: "Koleksi desain stuff",
     images: [
-      { title: "Stuff 1 – A", img: "/desain/stuff-1.png" },
-      { title: "Stuff 1 – B", img: "/desain/stuff-1(2).png" },
-      { title: "Stuff 1 – B", img: "/desain/stuff-1(3).png" },
-      { title: "Stuff 1 – B", img: "/desain/stuff-1(4).png" },
+      { img: "/desain/stuff-1.png" },
+      { img: "/desain/stuff-1(2).png" },
+      { img: "/desain/stuff-1(3).png" },
+      { img: "/desain/stuff-1(4).png" },
     ],
   },
   {
@@ -452,8 +658,8 @@ const stuffGroups = [
     title: "PDH",
     bio: "Koleksi desain stuff",
     images: [
-      { title: "Stuff 3 – A", img: "/desain/stuff-3.png" },
-      { title: "Stuff 3 – B", img: "/desain/stuff-3(2).png" },
+      {  img: "/desain/stuff-3.png" },
+      { img: "/desain/stuff-3(2).png" },
     ],
   },
   {
@@ -461,7 +667,7 @@ const stuffGroups = [
     title: "Totebag",
     bio: "Koleksi desain stuff",
     images: [
-      { title: "Stuff 4", img: "/desain/stuff-4.png" },
+      {img: "/desain/stuff-4.png" },
     ],
   },
   {
@@ -469,7 +675,7 @@ const stuffGroups = [
     title: "Landyard",
     bio: "Koleksi desain stuff",
     images: [
-      { title: "Stuff 5", img: "/desain/stuff-5.png" },
+      { img: "/desain/stuff-5.png" },
     ],
   },
   {
@@ -477,7 +683,7 @@ const stuffGroups = [
     title: "Tumblr",
     bio: "Koleksi desain stuff",
     images: [
-      { title: "Stuff 6", img: "/desain/stuff-6.png" },
+      { img: "/desain/stuff-6.png" },
     ],
   },
   {
@@ -485,9 +691,9 @@ const stuffGroups = [
     title: "Sticker",
     bio: "Koleksi desain stuff",
     images: [
-      { title: "Stuff 7", img: "/desain/stuff-7.png" },
-      { title: "Stuff 7", img: "/desain/stuff-7(2).png" },
-      { title: "Stuff 7", img: "/desain/stuff-7(3).png" },
+      { img: "/desain/stuff-7.png" },
+      { img: "/desain/stuff-7(2).png" },
+      { img: "/desain/stuff-7(3).png" },
     ],
   },
   {
@@ -495,9 +701,9 @@ const stuffGroups = [
     title: "Keychain",
     bio: "Koleksi desain stuff",
     images: [
-      { title: "Stuff 8 – A", img: "/desain/stuff-8.png" },
-      { title: "Stuff 8 – B", img: "/desain/stuff-8(2).png" },
-      { title: "Stuff 8 – C", img: "/desain/stuff-8(3).png" },
+      { img: "/desain/stuff-8.png" },
+      {  img: "/desain/stuff-8(2).png" },
+      {  img: "/desain/stuff-8(3).png" },
     ],
   },
   {
@@ -505,15 +711,12 @@ const stuffGroups = [
     title: "Buku",
     bio: "Koleksi desain stuff",
     images: [
-      { title: "Stuff 9", img: "/desain/stuff-9.png" },
-      { title: "Stuff 9", img: "/desain/stuff-9(2).png" },
+      { img: "/desain/stuff-9.png" },
+      {img: "/desain/stuff-9(2).png" },
     ],
   },
 ];
 
-/*
-  igAccounts — konten instagram (multi-image per akun)
-*/
 const igAccounts = [
   {
     id: "ig-1",
@@ -521,11 +724,11 @@ const igAccounts = [
     profileUrl: "https://www.instagram.com/osis_ickotapalu/",
     bio: "Konten desain untuk akun OSIS IC Kota Palu",
     images: [
-      { title: "Sosmed 1",       img: "/desain/sosmed-1.png" },
-      { title: "Sosmed 1 – B",   img: "/desain/sosmed-1(2).png" },
-      { title: "Sosmed 1 – C",   img: "/desain/sosmed-1(3).png" },
-      { title: "Sosmed 1 – D",   img: "/desain/sosmed-1(4).png" },
-      { title: "Sosmed 1 – E",   img: "/desain/sosmed-1(5).png" },
+      {img: "/desain/sosmed-1.png" },
+      { img: "/desain/sosmed-1(2).png" },
+      { img: "/desain/sosmed-1(3).png" },
+      { img: "/desain/sosmed-1(4).png" },
+      { img: "/desain/sosmed-1(5).png" },
     ],
   },
   {
@@ -534,9 +737,9 @@ const igAccounts = [
     profileUrl: "https://www.instagram.com/nahlw_ui/",
     bio: "Konten desain untuk akun @nahlw_ui",
     images: [
-      { title: "Sosmed 2",     img: "/desain/sosmed-2.png" },
-      { title: "Sosmed 2 – B", img: "/desain/sosmed-2(2).png" },
-    { title: "Sosmed 2 – B", img: "/desain/sosmed-2(3).png" },
+      {  img: "/desain/sosmed-2.png" },
+      {  img: "/desain/sosmed-2(2).png" },
+      {  img: "/desain/sosmed-2(3).png" },
     ],
   },
   {
@@ -545,23 +748,22 @@ const igAccounts = [
     profileUrl: "https://www.instagram.com/twinkle_grow/",
     bio: "Konten desain untuk akun @twinkle_grow",
     images: [
-      { title: "Sosmed 3",     img: "/desain/sosmed-3.png" },
-      { title: "Sosmed 3 – B", img: "/desain/sosmed-3(2).png" },
-      { title: "Sosmed 3 – C", img: "/desain/sosmed-3(3).png" },
-      { title: "Sosmed 3 – D", img: "/desain/sosmed-3(4).png" },
+      {img: "/desain/sosmed-3.png" },
+      {img: "/desain/sosmed-3(2).png" },
+      {img: "/desain/sosmed-3(3).png" },
+      {img: "/desain/sosmed-3(4).png" },
     ],
   },
   {
     id: "ig-4",
-    account: "@hmpsti",
-    profileUrl: "https://www.instagram.com/twinkle_grow/",
-    bio: "Konten desain untuk akun @twinkle_grow",
+    account: "@hmpsti.vokasiub",
+    profileUrl: "https://www.instagram.com/hmpsti.vokasiub/",
+    bio: "Company Profile HMPSTI 2025",
     images: [
-      { title: "Sosmed 4",     img: "/desain/sosmed-4.png" },
-      { title: "Sosmed 4", img: "/desain/sosmed-4.png" },
-      ],
+      { img: "/desain/sosmed-4.png" },
+      { title: "Company Profile HMPSTI 2025", img: "/desain/sosmed-4(2).png", href: "https://youtu.be/PPW3ELB-8xs?si=rHtAN2liDeIYe1nM" },
+  ],
   },
-  
 ];
 
 const CATS = ["Semua", "Poster", "Banner", "stuff", "konten instagram"];
@@ -573,7 +775,7 @@ const CAT_META = {
   "konten instagram":  { color:"#ef4444", icon:"" },
 };
 
-/* ── Stuff Multi-Image Lightbox (mirip IgLightbox) ── */
+/* ── Stuff Multi-Image Lightbox ── */
 const StuffLightbox = ({ group, startIdx = 0, onClose }) => {
   const [cur, setCur] = useState(startIdx);
   const images = group.images;
@@ -598,7 +800,6 @@ const StuffLightbox = ({ group, startIdx = 0, onClose }) => {
         display:"flex", alignItems:"center", justifyContent:"center",
         padding:20, animation:"lbFade .2s ease" }}>
 
-      {/* Close */}
       <button onClick={onClose}
         style={{ position:"absolute", top:20, right:24, background:"rgba(255,255,255,.1)",
           border:"1px solid rgba(255,255,255,.15)", borderRadius:"50%", width:44, height:44,
@@ -607,7 +808,6 @@ const StuffLightbox = ({ group, startIdx = 0, onClose }) => {
         onMouseEnter={e=>{e.currentTarget.style.background="rgba(255,255,255,.22)";}}
         onMouseLeave={e=>{e.currentTarget.style.background="rgba(255,255,255,.1)";}}>✕</button>
 
-      {/* Prev — hanya jika lebih dari 1 gambar */}
       {!hasSingle && (
         <button onClick={e=>{ e.stopPropagation(); setCur(i=>(i-1+images.length)%images.length); }}
           style={{ position:"absolute", left:16, top:"50%", transform:"translateY(-50%)",
@@ -618,14 +818,12 @@ const StuffLightbox = ({ group, startIdx = 0, onClose }) => {
           onMouseLeave={e=>{e.currentTarget.style.background="rgba(255,255,255,.1)";}}>‹</button>
       )}
 
-      {/* Main panel */}
       <div onClick={e=>e.stopPropagation()}
         style={{ borderRadius:20, overflow:"hidden",
           boxShadow:`0 40px 100px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.06)`,
           background:"#0f172a", display:"flex", flexDirection:"column",
           maxWidth:"min(92vw, 900px)" }}>
 
-        {/* Header */}
         <div style={{ padding:"14px 20px", borderBottom:"1px solid rgba(255,255,255,.07)",
           display:"flex", alignItems:"center", gap:12 }}>
           <div style={{ width:38, height:38, borderRadius:"50%",
@@ -648,7 +846,6 @@ const StuffLightbox = ({ group, startIdx = 0, onClose }) => {
           )}
         </div>
 
-        {/* Gambar aktif — ukuran menyesuaikan gambar asli */}
         <img key={cur} src={images[cur].img} alt={images[cur].title}
           style={{ display:"block",
             maxWidth:"min(92vw, 900px)",
@@ -671,7 +868,6 @@ const StuffLightbox = ({ group, startIdx = 0, onClose }) => {
           }}
         />
 
-        {/* Info & navigasi hint */}
         <div style={{ padding:"12px 20px", borderTop:"1px solid rgba(255,255,255,.07)" }}>
           <p style={{ fontFamily:"'Syne',sans-serif", fontWeight:700, color:"#f1f5f9",
             fontSize:14, margin:0, lineHeight:1.3 }}>{images[cur].title}</p>
@@ -681,7 +877,6 @@ const StuffLightbox = ({ group, startIdx = 0, onClose }) => {
           )}
         </div>
 
-        {/* Thumbnail strip — hanya jika lebih dari 1 */}
         {!hasSingle && (
           <div style={{ display:"flex", gap:8, padding:"10px 20px 16px",
             overflowX:"auto", borderTop:"1px solid rgba(255,255,255,.05)" }}>
@@ -702,7 +897,6 @@ const StuffLightbox = ({ group, startIdx = 0, onClose }) => {
         )}
       </div>
 
-      {/* Next — hanya jika lebih dari 1 */}
       {!hasSingle && (
         <button onClick={e=>{ e.stopPropagation(); setCur(i=>(i+1)%images.length); }}
           style={{ position:"absolute", right:16, top:"50%", transform:"translateY(-50%)",
@@ -718,7 +912,7 @@ const StuffLightbox = ({ group, startIdx = 0, onClose }) => {
   );
 };
 
-/* ── Instagram Multi-Image Lightbox ───────────────── */
+/* ── Instagram Multi-Image Lightbox ── */
 const IgLightbox = ({ account, startIdx = 0, onClose }) => {
   const [cur, setCur] = useState(startIdx);
   const images = account.images;
@@ -850,7 +1044,7 @@ const IgLightbox = ({ account, startIdx = 0, onClose }) => {
   );
 };
 
-/* ── Lightbox (untuk kategori Poster & Banner) ─────── */
+/* ── Lightbox (Poster & Banner) ── */
 const Lightbox = ({ item, onClose, onPrev, onNext }) => {
   useEffect(() => {
     const fn = (e) => {
@@ -940,7 +1134,7 @@ const Lightbox = ({ item, onClose, onPrev, onNext }) => {
   );
 };
 
-/* ── Gallery Item (Poster & Banner) ───────────────── */
+/* ── Gallery Item (Poster & Banner) ── */
 const GalleryItem = ({ item, onClick, isPortrait }) => {
   const [hov, setHov] = useState(false);
   const accent = CAT_META[item.cat]?.color || C.blue;
@@ -994,7 +1188,7 @@ const GalleryItem = ({ item, onClick, isPortrait }) => {
   );
 };
 
-/* ── Stuff Group Card (mirip IgAccountCard) ────────── */
+/* ── Stuff Group Card ── */
 const StuffGroupCard = ({ group, onClick }) => {
   const [hov, setHov] = useState(false);
   const accent = CAT_META["stuff"].color;
@@ -1013,7 +1207,6 @@ const StuffGroupCard = ({ group, onClick }) => {
         transition:"all .32s cubic-bezier(.34,1.56,.64,1)",
         aspectRatio:"4/3" }}>
 
-      {/* Cover */}
       <img src={cover} alt={group.title}
         style={{ width:"100%", height:"100%", objectFit:"cover", display:"block",
           transition:"transform .4s ease", transform:hov?"scale(1.07)":"scale(1)" }}
@@ -1028,14 +1221,12 @@ const StuffGroupCard = ({ group, onClick }) => {
         }}
       />
 
-      {/* Overlay */}
       <div style={{ position:"absolute", inset:0,
         background:hov
           ? "linear-gradient(to top,rgba(0,0,0,.88) 0%,rgba(0,0,0,.25) 50%,transparent 100%)"
           : "linear-gradient(to top,rgba(0,0,0,.65) 0%,transparent 60%)",
         transition:"background .32s ease", pointerEvents:"none" }}/>
 
-      {/* Jumlah foto (hanya jika lebih dari 1) */}
       {hasMultiple && (
         <div style={{ position:"absolute", top:10, right:10,
           background:"rgba(0,0,0,.55)", backdropFilter:"blur(6px)",
@@ -1046,7 +1237,6 @@ const StuffGroupCard = ({ group, onClick }) => {
         </div>
       )}
 
-      {/* Preview thumbnail strip (hover, hanya jika multi) */}
       {hov && hasMultiple && (
         <div style={{ position:"absolute", bottom:60, left:12, right:12,
           display:"flex", gap:5, pointerEvents:"none" }}>
@@ -1063,7 +1253,6 @@ const StuffGroupCard = ({ group, onClick }) => {
         </div>
       )}
 
-      {/* Info bawah */}
       <div style={{ position:"absolute", bottom:0, left:0, right:0, padding:"10px 14px", pointerEvents:"none" }}>
         <p style={{ fontFamily:"'Syne',sans-serif", fontWeight:800, color:"#fff",
           fontSize:13, margin:0, lineHeight:1.3 }}>{group.title}</p>
@@ -1080,7 +1269,7 @@ const StuffGroupCard = ({ group, onClick }) => {
   );
 };
 
-/* ── Instagram Account Card ───────────────────────── */
+/* ── Instagram Account Card ── */
 const IgAccountCard = ({ account, onClick }) => {
   const [hov, setHov] = useState(false);
   const accent = CAT_META["konten instagram"].color;
@@ -1158,12 +1347,12 @@ const IgAccountCard = ({ account, onClick }) => {
   );
 };
 
-/* ── Gallery Section ───────────────────────────────── */
+/* ── Gallery Section ── */
 const Gallery = () => {
   const [activeCat, setActiveCat] = useState("Semua");
   const [lightbox,  setLightbox]  = useState(null);
   const [igLightbox, setIgLightbox] = useState(null);
-  const [stuffLightbox, setStuffLightbox] = useState(null); // { group }
+  const [stuffLightbox, setStuffLightbox] = useState(null);
 
   const filtered = (activeCat === "Semua" || activeCat === "Poster" || activeCat === "Banner")
     ? (activeCat === "Semua"
@@ -1201,7 +1390,6 @@ const Gallery = () => {
           </p>
         </FadeIn>
 
-        {/* Filter tabs */}
         <FadeIn delay={0.1}>
           <div style={{ display:"flex", gap:8, flexWrap:"wrap", marginBottom:44 }}>
             {CATS.map(cat => {
@@ -1232,11 +1420,9 @@ const Gallery = () => {
           </div>
         </FadeIn>
 
-        {/* Per-category groups */}
         {visibleCats.map(cat => {
           const accent = CAT_META[cat]?.color || C.blue;
 
-          /* ── stuff: tampilkan per grup (mirip instagram) ── */
           if (cat === "stuff") {
             return (
               <div key={cat} style={{ marginBottom:56 }}>
@@ -1269,7 +1455,6 @@ const Gallery = () => {
             );
           }
 
-          /* ── konten instagram ── */
           if (cat === "konten instagram") {
             return (
               <div key={cat} style={{ marginBottom:56 }}>
@@ -1302,7 +1487,6 @@ const Gallery = () => {
             );
           }
 
-          /* ── Poster & Banner (single image per card) ── */
           const items = filtered.filter(g => g.cat === cat);
           if (items.length === 0) return null;
 
@@ -1346,12 +1530,8 @@ const Gallery = () => {
             </div>
           );
         })}
-
-        {/* Tip box */}
-        
       </div>
 
-      {/* Lightbox Poster/Banner */}
       {lightbox !== null && (
         <Lightbox
           item={filtered[lightbox]}
@@ -1361,7 +1541,6 @@ const Gallery = () => {
         />
       )}
 
-      {/* Lightbox Instagram */}
       {igLightbox !== null && (
         <IgLightbox
           account={igLightbox.account}
@@ -1370,7 +1549,6 @@ const Gallery = () => {
         />
       )}
 
-      {/* Lightbox Stuff */}
       {stuffLightbox !== null && (
         <StuffLightbox
           group={stuffLightbox.group}
@@ -1416,11 +1594,11 @@ const Organization = () => (
 
 /* ══ SKILLS ═══════════════════════════════════════════ */
 const skillGroups = [
-  { title:"⚙️ Hard Skills", border:C.blue,
-    items:["UI/UX Design","Wireframing","Prototyping","Figma","PHP","Laravel","HTML","CSS","Basic Python","MySQL","SDLC","Requirement Elicitation","UML","DFD"] },
-  { title:"🧠 Soft Skills", border:"#8b5cf6",
-    items:["Communication","Time Management","Team Collaboration","Problem Solving"] },
-  { title:"🎨 Creative Skills", border:"#f43f5e",
+  { title:"Hard Skills", border:C.blue,
+    items:["UI/UX Design","Wireframing","Prototyping","Figma","PHP","Laravel","HTML","CSS","C++", "Python","MySQL","SDLC","Requirement Elicitation","UML","DFD"] },
+  { title:"Soft Skills", border:"#8b5cf6",
+    items:["Communication","Time Management","Team Collaboration","Project Management","Analytical Thinking", "Problem Solving"] },
+  { title:"Creative Skills", border:"#f43f5e",
     items:["Graphic Design","Video Editing","Photography & Videography"] },
 ];
 
@@ -1449,6 +1627,7 @@ const tools = [
   { name:"VS Code",     img:"/icon/vsc.jpg",        color:"#007acc" },
   { name:"Arduino IDE", img:"/icon/arduinoide.jpg", color:"#00979d" },
   { name:"Python",      img:"/icon/python.jpg",     color:"#3776ab" },
+  { name:"Flask",      img:"/icon/flask.jpg",       color:"#3776ab" },
   { name:"Laravel",     img:"/icon/laravel.jpg",    color:"#ef4444" },
   { name:"MySQL",       img:"/icon/mysql.jpg",      color:"#00758f" },
   { name:"GitHub",      img:"/icon/github.jpg",     color:"#24292e" },
