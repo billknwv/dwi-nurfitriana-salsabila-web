@@ -1595,9 +1595,9 @@ const Organization = () => (
 /* ══ SKILLS ═══════════════════════════════════════════ */
 const skillGroups = [
   { title:"Hard Skills", border:C.blue,
-    items:["UI/UX Design","Wireframing","Prototyping","Figma","PHP","Laravel","HTML","CSS","C++", "Python","MySQL","SDLC","Requirement Elicitation","ERP","UML","DFD"] },
+    items:["System Analysis","Requirement Elicitation","SDLC","UML","ERD","DFD","UI/UX Design","Wireframing","Prototyping","Figma","PHP","Laravel","JavaScript","HTML","CSS","Python","MySQL"] },
   { title:"Soft Skills", border:"#8b5cf6",
-    items:["Communication","Time Management","Team Collaboration","Project Management","Analytical Thinking", "Problem Solving"] },
+    items:["Communication","Time Management","Team Collaboration","Analytical Thinking","Problem Solving"] },
   { title:"Creative Skills", border:"#f43f5e",
     items:["Graphic Design","Video Editing","Photography & Videography"] },
 ];
