@@ -339,7 +339,7 @@ const Education = () => (
 /* ══ PROJECTS ═════════════════════════════════════════ */
 const projects = [
   {
-    img:"/project/coffee-shop.jpg",
+    img:"/proyek/mao.png",
     title:"Website Coffee Shop & Sistem Reservasi", year:"2025",
     desc:"Aplikasi berbasis web yang dirancang sebagai media branding digital sekaligus platform layanan reservasi online untuk bisnis coffee shop.",
     links: [
@@ -349,7 +349,7 @@ const projects = [
     ],
   },
   {
-    img:"/project/maoplace.jpg",
+    img:"/proyek/msi.png",
     title:"Analisis Sistem Informasi MaoPlace", year:"2025",
     desc:"Proyek analisis proses bisnis yang bertujuan untuk mengidentifikasi hambatan operasional pada UMKM MaoPlace.",
     links: [
@@ -357,7 +357,7 @@ const projects = [
     ],
   },
   {
-    img:"/project/akademik.jpg",
+    img:"/proyek/althera.png",
     title:"Sistem Informasi Akademik", year:"2025",
     desc:"Perancangan dan pengembangan platform sistem informasi akademik berbasis desktop untuk mengoptimalkan pengelolaan data pendidikan.",
     links: [
@@ -367,7 +367,7 @@ const projects = [
     ],
   },
   {
-    img:"/project/waste-detector.jpg",
+    img:"/proyek/ai.png",
     title:"Waste Material Detector", year:"2025",
     desc:"Aplikasi berbasis web terintegrasi kecerdasan buatan (AI) yang berfungsi untuk mendeteksi dan mengidentifikasi jenis material sampah secara otomatis.",
     links: [
@@ -376,7 +376,7 @@ const projects = [
     ],
   },
   {
-    img:"/project/sortirin.jpg",
+    img:"/proyek/iot.png",
     title:"SORTIR.IN – Smart Waste Management", year:"2026",
     desc:"Inovasi sistem pengelolaan sampah pintar berbasis IoT yang mengombinasikan perangkat keras pemilah sampah otomatis dengan platform monitoring berbasis web.",
     links: [
